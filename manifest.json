@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Sock Market",
+  "name": "Sock Market - Punny socks that will knock you off your feet",
   "icons": [
     {
       "src": "favicon.ico",
