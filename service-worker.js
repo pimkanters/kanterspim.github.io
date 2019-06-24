@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.2bee4ec16c9d429de0a22794980fdba5.js"
+  "/precache-manifest.7dcf892bcc5c14f4144f378452362e48.js"
 );
 
 workbox.clientsClaim();
@@ -31,12 +31,4 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 workbox.routing.registerNavigationRoute("/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
-});
-
-self.addEventListener('sync', function (event) {
-  console.log("Sync event fired!");
-  if(event.tag == 'verzend'){
-      console.log("Bestelling voltooid!")
-      self.registration.showNotification("Bestelling voltooid!");
-  }
 });
