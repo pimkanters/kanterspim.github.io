@@ -32,3 +32,11 @@ workbox.routing.registerNavigationRoute("/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
+
+self.addEventListener('sync', function (event) {
+  console.log("Sync event fired!");
+  if(event.tag == 'verzend'){
+      console.log("Bestelling voltooid!")
+      self.registration.showNotification("Bestelling voltooid!");
+  }
+});
